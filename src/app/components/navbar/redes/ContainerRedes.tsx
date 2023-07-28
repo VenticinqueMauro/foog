@@ -1,4 +1,5 @@
 import { FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react";
+import { FaArtstation, FaBehance, FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa"
 import RedItem from "./RedItem";
 import { ReactNode } from "react";
 
@@ -11,15 +12,23 @@ export default function ContainerRedes() {
 
     const Redes: Red[] = [
         {
-            icon: <InstagramIcon />,
+            icon: <FaBehance />,
             href: "#"
         },
         {
-            icon: <FacebookIcon />,
+            icon: <FaInstagram />,
             href: "#"
         },
         {
-            icon: <TwitterIcon />,
+            icon: <FaLinkedinIn />,
+            href: "#"
+        },
+        {
+            icon: <FaArtstation />,
+            href: "#"
+        },
+        {
+            icon: <FaFacebookF />,
             href: "#"
         },
     ]
@@ -28,7 +37,7 @@ export default function ContainerRedes() {
         <ul className="hidden md:inline-flex flex items-center gap-4 md:w-[200px] w-auto justify-end md:justify-center">
             {
                 Redes.map((red, i) => (
-                    <li key={i} className="icon-container ">
+                    <li key={i} className="text-xl icon-container">
                         <RedItem icon={red.icon} href={red.href} />
                     </li>
                 ))

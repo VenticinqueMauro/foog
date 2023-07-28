@@ -81,7 +81,11 @@
   transform: perspective(1500px) rotateY(17deg);
 }
 
-.neon-effect {
+.neon-text {
   text-shadow: 0 0 5px #e72081, 0 0 10px #e72081, 0 0 15px #e72081, 0 0 20px rgba(231, 32, 129, 0.6);
+}
+
+.neon-redes {
+  text-shadow: 0 0 5px #2067E7, 0 0 10px #2067E7, 0 0 15px #2067E7, 0 0 20px rgba(231, 32, 129, 0.6);
 }
 
