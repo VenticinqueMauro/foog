@@ -1,4 +1,3 @@
-import { FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react";
 import { FaArtstation, FaBehance, FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa"
 import RedItem from "./RedItem";
 import { ReactNode } from "react";
