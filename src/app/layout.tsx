@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Noto_Sans, Poppins } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 
 const poppins = Poppins({ subsets: ['latin'], style: "normal", weight: ["400"] })
+
+const noto = Noto_Sans({subsets: ['latin'], style: "normal", weight: "500"})
 
 export const metadata: Metadata = {
   title: 'FOOG | Estudio De Visualización 3D',
@@ -28,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} relative min-h-screen w-full text-white bg-black`}>
+      <body className={`${noto.className} relative min-h-screen w-full text-white bg-black`}>
         <Navbar />
         {children}
       </body>
