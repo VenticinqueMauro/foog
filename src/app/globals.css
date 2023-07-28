@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 12 14 / var(--tw-bg-opacity));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(22 22 24);
+  transition: all 2.5s ease-in;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(24 24 27);
+}
+
+/*LOGO*/
+
+.logo {
+  filter: drop-shadow(2px 2px 0px #333);
+}
+
+/*MENU ITEMS*/
+
+.menuItem {
+  position: relative;
+}
+
+.menuItem::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #e72081;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover::before,
+.menuItem:active::before,
+.menuItem:focus::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/*ICONS REDES SOCIALES*/
+
+.icon-container {
+  transition: transform 0.5s ease-in-out;
+}
+
+.icon-container:hover {
+  transform: rotateX(360deg);
+}
+
+.zoomimg {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+.zoomimg:hover {
+  transform: scale(1.005);
+  opacity: 1;
+}
+
+.reflejo {
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, transparent, #0004);
+  transform-origin: center;
+  transform: perspective(1500px) rotateY(17deg);
+}
+
+.neon-effect {
+  text-shadow: 0 0 5px #e72081, 0 0 10px #e72081, 0 0 15px #e72081, 0 0 20px rgba(231, 32, 129, 0.6);
+}
+
