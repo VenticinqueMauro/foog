@@ -24,7 +24,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <section className="h-screen px-10 bg-zinc-950">
+        <section className="h-screen px-10">
             {children}
         </section>
     )

@@ -11,16 +11,16 @@ export default function CategoryContainer() {
                 {categoryItems.map((item, i) => (
                     <div
                         key={i}
-                        className="relative h-[80%] w-[300px] hover:w-[500px] opacity-30 hover:opacity-100 group transition-all duration-300 reflejo"
+                        className="relative h-[80%] w-[300px] hover:w-[500px] opacity-50 hover:opacity-100 group transition-all duration-300 reflejo "
                     >
                         <Image
                             src={item.img}
                             placeholder="blur"
                             loading="eager"
                             alt="fotoCategory"
-                            className="object-cover w-full h-full"
+                            className="object-cover w-full h-full rounded "
                         />
-                        <p className="absolute top-0 left-0 flex items-end gap-4 p-3 mt-4 text-xl font-semibold capitalize group-hover:bg-black/60 group-hover:rounded-r-[6px] pr-8">
+                        <p className="absolute top-0 left-0 flex items-end gap-4 p-3 mt-4 text-xl font-semibold capitalize group-hover:bg-black/50 group-hover:rounded-r-[6px] pr-8 cristal">
                             <b className="text-3xl text-[#E72081] typing-text">0{Number(i + 1)}</b> {item.name}
                         </p>
                         <ZoomButton categoryName={item.name} />

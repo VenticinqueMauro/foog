@@ -41,6 +41,8 @@
   left: 0;
   right: 0;
   height: 2px;
+  /*background-color: #A4E720; verde fluo*/
+  /*background-color: #73B9A1; verde*/
   background-color: #e72081;
   transform-origin: bottom right;
   transform: scaleX(0);
@@ -78,14 +80,29 @@
   -webkit-box-reflect: below 2px
     linear-gradient(transparent, transparent, #0004);
   transform-origin: center;
-  transform: perspective(1500px) rotateY(17deg);
+  transform: perspective(1500px) rotateY(10deg);
+}
+
+.cristal{
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .neon-text {
-  text-shadow: 0 0 5px #e72081, 0 0 10px #e72081, 0 0 15px #e72081, 0 0 20px rgba(231, 32, 129, 0.6);
+  text-shadow: 0 0 5px #e72081, 0 0 10px #e72081, 0 0 15px #e72081,
+    0 0 20px rgba(231, 32, 129, 0.6);
 }
 
 .neon-redes {
-  text-shadow: 0 0 5px #2067E7, 0 0 10px #2067E7, 0 0 15px #2067E7, 0 0 20px rgba(231, 32, 129, 0.6);
+  text-shadow: 0 0 5px #2067e7, 0 0 10px #2067e7, 0 0 15px #2067e7,
+    0 0 20px rgba(231, 32, 129, 0.6);
 }
 
+.customText {
+  background-image: linear-gradient(
+    #2067e7 25%,
+    #00b7fa 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
