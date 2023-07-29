@@ -60,4 +60,6 @@ const photos = [
     image30,
 ];
 
+
+
 export default photos;

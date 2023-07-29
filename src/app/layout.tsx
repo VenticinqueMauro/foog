@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${noto.className} relative min-h-screen w-full text-white bg-[#161716]`}>
+      <body className={`${noto.className} relative min-h-screen w-full text-white bg-[#141D1E]`}>
         <Navbar />
         {children}
       </body>

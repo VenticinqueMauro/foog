@@ -22,12 +22,6 @@
   background-color: rgb(24 24 27);
 }
 
-/*LOGO*/
-
-.logo {
-  filter: drop-shadow(2px 2px 0px #333);
-}
-
 /*MENU ITEMS*/
 
 .menuItem {
@@ -43,7 +37,8 @@
   height: 2px;
   /*background-color: #A4E720; verde fluo*/
   /*background-color: #73B9A1; verde*/
-  background-color: #e72081;
+  /*background-color: #e72081;*/
+  background-color: #d6fb41;
   transform-origin: bottom right;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -98,11 +93,11 @@
     0 0 20px rgba(231, 32, 129, 0.6);
 }
 
-.customText {
+/* .customText {
   background-image: linear-gradient(
-    #2067e7 25%,
-    #00b7fa 100%
+    #d6fb41 25%,
+    #d6fb41 100%
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */

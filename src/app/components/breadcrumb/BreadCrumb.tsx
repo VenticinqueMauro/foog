@@ -13,8 +13,7 @@ export default function BreadCrumb({ params }: { params: { name: string } }) {
             <MdKeyboardArrowRight className="text-lg text-zinc-400" />
             <Link href='/galeria' className="font-normal hover:underline text-zinc-400">Galería</Link>
             <MdKeyboardArrowRight className="text-lg text-zinc-400" />
-            <p className="text-lg font-medium">{params.name}</p>
-
+            <p className="text-lg ">{params.name}</p>
         </div>
     )
-}
+} 

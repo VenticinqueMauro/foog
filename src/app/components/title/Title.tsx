@@ -7,6 +7,6 @@ const sora = Sora({ subsets: ['latin'], style: "normal", weight: "500"})
 export default function Title({ title }: { title: string }) {
 
     return (
-        <h1 className={`${robotoCondensed.className} text-6xl font-bold text-center capitalize `}>{title}</h1>
+        <h1 className={`${robotoCondensed.className} text-6xl font-bold text-center capitalize text-[#ACAA9E]`} style={{textShadow: "0px 0px 5px #161616"}}>{title}</h1>
     )
 }
