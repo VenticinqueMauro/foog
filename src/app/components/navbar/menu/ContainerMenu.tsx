@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ContainerMenu() {
 
-    const linkStyle = "cursor-pointer menuItem hover:text-white hover:bg-[#ACAA9E]/10 px-3 py-1 rounded active:text-white focus:text-white capitalize"
+    const linkStyle = "cursor-pointer text-[#ACAA9E] menuItem hover:text-white hover:bg-[#ACAA9E]/10 px-3 py-1 rounded active:text-white focus:text-white capitalize"
 
     return (
         <ul className="items-center hidden gap-1 md:flex">
