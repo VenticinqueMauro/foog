@@ -42,6 +42,7 @@ interface Photo {
     }[];
 }
 
+
 const photos: Photo[] = [
     image1,
     image2,
