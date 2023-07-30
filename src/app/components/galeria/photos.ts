@@ -28,7 +28,21 @@ import image28 from "../../../../public/28.jpg";
 import image29 from "../../../../public/29.jpg";
 import image30 from "../../../../public/30.jpg";
 
-const photos = [
+interface Photo {
+    key?: string;
+    src: string;
+    width: number;
+    height: number;
+    alt?: string;
+    title?: string;
+    srcSet?: {
+        src: string;
+        width: number;
+        height: number;
+    }[];
+}
+
+const photos: Photo[] = [
     image1,
     image2,
     image3,
@@ -59,7 +73,5 @@ const photos = [
     image29,
     image30,
 ];
-
-
 
 export default photos;

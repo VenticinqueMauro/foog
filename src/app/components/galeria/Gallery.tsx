@@ -26,6 +26,7 @@ export default function Gallery() {
                 defaultContainerWidth={1200}
                 sizes={{ size: "calc(100vw - 240px)" }}
                 onClick={({ index: current }) => setIndex(current)}
+                rowConstraints={{maxPhotos: 4}}
             />
 
             <Lightbox
