@@ -6,7 +6,7 @@ import Link from "next/link"
 
 function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 z-10 flex flex-row-reverse items-center justify-between w-full px-6 py-3 text-gray-300 bg-transparent md:flex-row cristal">
+        <nav className="fixed top-0 left-0 z-10 flex flex-row-reverse items-center justify-between w-full px-3 py-3 text-gray-300 bg-transparent md:px-10 md:flex-row cristal">
             <div className="block text-3xl md:hidden">
                 <TfiMenu />
             </div>
