@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -11,10 +11,15 @@ import NextJsImage from "./NextImage";
 import ImageGallery from "./ImageGallery";
 import { PhotoAlbum } from "react-photo-album";
 import photos from "./photos";
+import useResize from "@/app/hooks/useResize";
+
+
 
 export default function Gallery() {
 
     const [index, setIndex] = useState(-1);
+    const { maxPhoto } = useResize()
+
 
     return (
         <>
@@ -26,7 +31,8 @@ export default function Gallery() {
                 defaultContainerWidth={1200}
                 sizes={{ size: "calc(100vw - 240px)" }}
                 onClick={({ index: current }) => setIndex(current)}
-                rowConstraints={{maxPhotos: 4}}
+                rowConstraints={{ maxPhotos: maxPhoto }}
+
             />
 
             <Lightbox
@@ -34,7 +40,6 @@ export default function Gallery() {
                 open={index >= 0}
                 close={() => setIndex(-1)}
                 slides={photos}
-                // styles={{ container: { backgroundColor: "#09090B" } }}
                 render={{ slide: NextJsImage }}
                 plugins={[Download, Slideshow, Fullscreen, Zoom]}
 

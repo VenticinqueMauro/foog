@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ACAA9E;
+  background-color: #acaa9e;
   transition: all 2.5s ease-in;
   border-radius: 10px;
 }
@@ -51,6 +51,69 @@
   transform: scaleX(1);
 }
 
+/* MENU HAMBURGUESA */
+
+.burger {
+  position: relative;
+  width: 28px; /* Reducido en un 30% */
+  height: 21px; /* Reducido en un 30% */
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 3px; /* Reducido en un 30% */
+  width: 100%;
+  background: black;
+  border-radius: 7px; /* Reducido en un 30% */
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  background-color: #acaa9e;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 3px; /* Ajustado para que encaje mejor con el nuevo tamaño */
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 19px; /* Ajustado para que encaje mejor con el nuevo tamaño */
+  left: 3px; /* Ajustado para que encaje mejor con el nuevo tamaño */
+}
+
 /*ICONS REDES SOCIALES*/
 
 .icon-container {
@@ -78,8 +141,6 @@
   transform: perspective(1500px) rotateY(10deg);
 }
 
-
-
 .cristal {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -98,6 +159,7 @@
 .textura {
   background-color: #141d1e;
   background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+
 }
 
 /* .customText {

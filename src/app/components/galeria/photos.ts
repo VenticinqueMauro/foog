@@ -42,8 +42,7 @@ interface Photo {
     }[];
 }
 
-
-const photos: Photo[] = [
+const imagePath = [
     image1,
     image2,
     image3,
@@ -73,6 +72,19 @@ const photos: Photo[] = [
     image28,
     image29,
     image30,
-];
+]
+
+
+const photos = imagePath.map(image => ({
+    // src: image.src,
+    // blurDataUrl: image.blurDataURL,
+    // blurWidth: image.blurWidth,
+    // blurHeight: image.blurHeight,
+    ...image,
+    width: 350,
+    height: 300,
+
+}))
+
 
 export default photos;
