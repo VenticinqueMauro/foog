@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from "react";
 
 const mobile = 2
@@ -5,7 +7,7 @@ const desktop = 5
 
 export default function useResize() {
 
-    const [maxPhoto, setMaxPhoto] = useState(window.innerWidth > 768 ? desktop : mobile);
+    const [maxPhoto, setMaxPhoto] = useState(0);
 
     const handleResize = () => {
         window.innerWidth < 768 ? setMaxPhoto(mobile) : setMaxPhoto(desktop)
@@ -17,6 +19,6 @@ export default function useResize() {
         return () => window.removeEventListener("resize", handleResize)
     }, [])
 
-    return { maxPhoto }  
+    return { maxPhoto }
 
 }

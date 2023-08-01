@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Acerca de | FOOG | Estudio De Visualización 3D',
         description: 'Conoce más sobre FOOG, nuestro equipo de artistas 3D y nuestra pasión por la visualización arquitectónica. Descubre cómo hemos ayudado a dar vida a las ideas de nuestros clientes a través de renders realistas y experiencias inmersivas. ¡Únete a nosotros en este emocionante viaje!',
-        url: 'http://localhost:3000/about',
+        url: 'http://localhost:3000/acercade',
         type: 'website',
     },
 };

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { name: string } })
         openGraph: {
             title: pageTitle,
             description: pageDescription,
-            url: `http://localhost:3000//gallery/${params.name}`,
+            url: `http://localhost:3000/galeria/${params.name}`,
             type: 'website',
         },
         viewport: 'width=device-width, initial-scale=1',

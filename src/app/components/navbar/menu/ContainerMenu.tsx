@@ -1,21 +1,27 @@
+'use client'
 
 import Link from "next/link";
+import Dropdown from "../../dropDown/Dropdown";
 
-export default function ContainerMenu() {
+interface Props {
+    ulClass: string;
+    liClass: string;
+    handleClick: () => void;
+}
 
-    const linkStyle = "cursor-pointer text-[#ACAA9E] menuItem hover:text-white hover:bg-[#ACAA9E]/10 px-3 py-1 rounded active:text-white focus:text-white capitalize"
+export default function ContainerMenu({ ulClass, liClass, handleClick }: Props) {
+
+
 
     return (
-        <ul className="items-center hidden gap-1 md:flex">
-            <li>
-                <Link href='/' className={linkStyle}>home</Link>
+        <ul className={ulClass}>
+            <li className={liClass} onClick={handleClick}>
+                <Link href='/' className="block w-full" >home</Link>
             </li>
-            <li>
-                <Link href='/acercade' className={linkStyle}>about</Link>
+            <li className={liClass} onClick={handleClick}>
+                <Link href='/acercade' className="block w-full">about</Link>
             </li>
-            <li>
-                <Link href='/galeria' className={linkStyle}>Gallery</Link>
-            </li>
+            <Dropdown liClass={liClass} handleClick={handleClick}  />
         </ul>
 
     )
