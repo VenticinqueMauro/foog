@@ -18,7 +18,7 @@ function Navbar() {
     const [isOpen, setisOpen] = useState(false)
 
     const handleClick = () => {
-        setisOpen(!isOpen)
+        setisOpen((prev) => !prev)
     }
 
     return (
@@ -26,7 +26,7 @@ function Navbar() {
             <nav className="fixed top-0 left-0 z-20 flex flex-row-reverse items-center justify-between w-full px-3 py-3 text-gray-300 bg-transparent md:px-10 md:flex-row cristal">
                 <MenuHamburguesa handleClick={handleClick} />
                 <Logo />
-                <ContainerMenu ulClass={ulClassDesktop} liClass={liClassDesktop} handleClick={handleClick}/>
+                <ContainerMenu ulClass={ulClassDesktop} liClass={liClassDesktop} handleClick={handleClick} />
                 <ContainerRedes />
             </nav>
             <Sidebar isOpen={isOpen} handleClick={handleClick} />

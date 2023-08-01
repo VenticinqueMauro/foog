@@ -12,7 +12,7 @@ const liClassMobile = "p-2 rounded hover:bg-[#25292B] hover:border  border-[#ACA
 
 export default function Sidebar({ isOpen, handleClick }: Props) {
     return (
-        <>
+        <div className='md:hidden'>
             <div
                 className={`${isOpen ? 'opacity-100' : 'opacity-0 hidden'} transition-opacity duration-100 absolute top-0 z-10 w-full h-screen cristal bg-black/50`}
                 onClick={handleClick}
@@ -22,6 +22,6 @@ export default function Sidebar({ isOpen, handleClick }: Props) {
             >
                 <ContainerMenu ulClass={ulClassMobile} liClass={liClassMobile} handleClick={handleClick}  />
             </section>
-        </>
+        </div>
     )
 }

@@ -3,7 +3,6 @@ interface Props {
     handleClick: () => void
 }
 
-
 export default function MenuHamburguesa({ handleClick }: Props) {
 
     return (

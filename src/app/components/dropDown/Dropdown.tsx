@@ -8,10 +8,12 @@ import { useState } from 'react'
 
 export default function Dropdown({ liClass, handleClick }: { liClass: string, handleClick: () => void }) {
 
-    const [isOpen, setIsOpen] = useState(false)
+
+    const [isDpOpen, setIsDpOpen] = useState(false)
 
     const handleDropDown = () => {
-        setIsOpen(!isOpen)
+        handleClick()
+        setIsDpOpen((prev) => !prev)
     }
 
     return (
@@ -22,7 +24,7 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                     onClick={handleDropDown}
                 >
                     Galery
-                    <MdKeyboardArrowDown className={`${isOpen && 'transform rotate-180'} transition-transform duration-300`} />
+                    <MdKeyboardArrowDown className={`${isDpOpen && 'transform rotate-180'} transition-transform duration-300`} />
                 </Menu.Button>
                 <Menu.Items className='absolute left-0 flex inline-flex flex-col gap-1 p-2 md:rounded top-10 mt-3 ml-3 border-l md:m-0 border-[#ACAA9E] md:border-none md:bg-[#25292B]/90 w-full'>
                     {
@@ -32,7 +34,7 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                                     <Link
                                         href={`/galeria/${item.href}`}
                                         className={`${active && 'bg-[#161716] rounded '} capitalize p-2`}
-                                        onClick={handleClick}
+                                        onClick={handleDropDown}
                                     >
                                         {item.name}
                                     </Link>
@@ -45,7 +47,7 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                             <Link
                                 href={`/galeria`}
                                 className={`${active && 'bg-[#161716] rounded '} capitalize p-2`}
-                                onClick={handleClick}
+                                onClick={handleDropDown}
                             >
                                 Todos
                             </Link>
