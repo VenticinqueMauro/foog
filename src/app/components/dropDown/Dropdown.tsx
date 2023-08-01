@@ -5,23 +5,26 @@ import Link from 'next/link'
 import { categoryItems } from '../galeria/categorias/categoryItem'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { useState } from 'react'
+import { useStore } from '@/app/store/store'
 
 export default function Dropdown({ liClass, handleClick }: { liClass: string, handleClick: () => void }) {
 
 
-    const [isDpOpen, setIsDpOpen] = useState(false)
+    const [isDpOpen, setIsDpOpen] = useState(false);
+    const { setIsSidebarOpen } = useStore();
 
     const handleDropDown = () => {
-        handleClick()
+        setIsSidebarOpen()
         setIsDpOpen((prev) => !prev)
     }
+
 
     return (
         <li className={`${liClass} relative`}>
             <Menu>
                 <Menu.Button
                     className='flex items-center justify-between w-full gap-2 md:justify-normal'
-                    onClick={handleDropDown}
+                    onClick={() => setIsDpOpen((prev) => !prev)}
                 >
                     Galery
                     <MdKeyboardArrowDown className={`${isDpOpen && 'transform rotate-180'} transition-transform duration-300`} />
