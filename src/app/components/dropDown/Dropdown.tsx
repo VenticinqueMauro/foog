@@ -47,7 +47,7 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                             <Link
                                 href={`/galeria`}
                                 className={`${active && 'bg-[#161716] rounded '} capitalize p-2`}
-                                onClick={handleDropDown}
+                                onClick={handleClick}
                             >
                                 Todos
                             </Link>
