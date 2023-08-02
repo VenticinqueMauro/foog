@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const mobile = 2
-const desktop = 5
+const desktop = 4
 
 export default function useResize() {
 

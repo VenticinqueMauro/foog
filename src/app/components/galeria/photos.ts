@@ -76,10 +76,6 @@ const imagePath = [
 
 
 const photos = imagePath.map(image => ({
-    // src: image.src,
-    // blurDataUrl: image.blurDataURL,
-    // blurWidth: image.blurWidth,
-    // blurHeight: image.blurHeight,
     ...image,
     width: 350,
     height: 300,
