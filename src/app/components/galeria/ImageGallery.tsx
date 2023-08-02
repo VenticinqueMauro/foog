@@ -17,7 +17,7 @@ export default function ImageGallery({
                     src={photo}
                     placeholder={"blurDataURL" in photo ? "blur" : undefined}
                     {...{ alt, title, sizes, className, onClick }}
-                    className="rounded-md shadow-md shadow-black zoomimg cursor-crosshair "
+                    className="rounded-md shadow-md shadow-black zoomimg cursor-crosshair"
                     loading="eager"
                 />
             </div>

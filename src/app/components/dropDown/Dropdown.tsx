@@ -4,7 +4,7 @@ import { Menu } from '@headlessui/react'
 import Link from 'next/link'
 import { categoryItems } from '../galeria/categorias/categoryItem'
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useStore } from '@/app/store/store'
 
 export default function Dropdown({ liClass, handleClick }: { liClass: string, handleClick: () => void }) {
@@ -18,6 +18,29 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
         setIsDpOpen((prev) => !prev)
     }
 
+    const closeDropdown = () => {
+        setIsDpOpen(false);
+    }
+
+    useEffect(() => {
+        const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
+            const target = event.target as HTMLElement;
+            if (!target.closest('.dropdown-menu')) {
+                closeDropdown();
+            }
+        };
+
+        if (isDpOpen) {
+            document.addEventListener('click', handleOutsideClick);
+        } else {
+            document.removeEventListener('click', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, [isDpOpen]);
+
 
     return (
         <li className={`${liClass} relative`}>
@@ -30,6 +53,17 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                     <MdKeyboardArrowDown className={`${isDpOpen && 'transform rotate-180'} transition-transform duration-300`} />
                 </Menu.Button>
                 <Menu.Items className='absolute left-0 flex inline-flex flex-col gap-1 p-2 md:rounded top-10 mt-3 ml-3 border-l md:m-0 border-[#ACAA9E] md:border-none md:bg-[#25292B]/90 w-full'>
+                    <Menu.Item >
+                        {({ active }) => (
+                            <Link
+                                href={`/galeria`}
+                                className={`${active && 'bg-[#161716] rounded '} hidden md:block capitalize p-2`}
+                                onClick={handleClick}
+                            >
+                                Principal
+                            </Link>
+                        )}
+                    </Menu.Item>
                     {
                         categoryItems.map(item => (
                             <Menu.Item key={item.name}>
@@ -45,17 +79,6 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                             </Menu.Item>
                         ))
                     }
-                    <Menu.Item >
-                        {({ active }) => (
-                            <Link
-                                href={`/galeria`}
-                                className={`${active && 'bg-[#161716] rounded '} capitalize p-2`}
-                                onClick={handleClick}
-                            >
-                                Todos
-                            </Link>
-                        )}
-                    </Menu.Item>
                 </Menu.Items>
             </Menu>
         </li>

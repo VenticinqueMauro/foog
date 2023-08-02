@@ -124,14 +124,18 @@
   transform: rotateX(360deg);
 }
 
-.zoomimg {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.7;
-}
+/* ZOOM AND OPACITY IMAGES */
 
-.zoomimg:hover {
-  transform: scale(1.005);
-  opacity: 1;
+@media (min-width: 768px) {
+  .zoomimg {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+  }
+
+  .zoomimg:hover {
+    transform: scale(1.005);
+    opacity: 1;
+  }
 }
 
 .reflejo {
@@ -159,7 +163,6 @@
 .textura {
   background-color: #141d1e;
   background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
-
 }
 
 /* .customText {

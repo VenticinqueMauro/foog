@@ -1,7 +1,7 @@
+import Title from "@/app/components/title/Title";
 import Image from "next/image";
 import ZoomButton from "../../button/ZoomButton";
 import { categoryItems } from "./categoryItem";
-import Title from "@/app/components/title/Title"
 
 export default function CategoryContainer() {
     return (
