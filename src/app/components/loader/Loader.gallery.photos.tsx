@@ -12,7 +12,7 @@ export default function LoaderGalleryPhotos() {
             <span className="block h-6 mb-10 rounded rounded-xl w-52 bg-zinc-700">&nbsp;</span>
             <ul className="grid grid-cols-12 gap-2">
                 {
-                    skeletonImage.map((image, i) => <li key={i} className="block col-span-6 rounded md:col-span-4 xl:col-span-3 h-[300px] bg-zinc-700">&nbsp;</li>)
+                    skeletonImage.map((image, i) => <li key={i} className="block col-span-6 rounded md:col-span-4 xl:col-span-3 h-96 md:h-[300px] bg-zinc-700">&nbsp;</li>)
                 }
             </ul>
         </span>

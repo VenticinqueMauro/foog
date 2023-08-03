@@ -18,10 +18,10 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
     return (
         <ul className={ulClass}>
             <li className={liClass} onClick={setIsSidebarOpen}>
-                <Link href='/' className="block w-full" >home</Link>
+                <Link href='/' className="block w-full" >Inicio</Link>
             </li>
             <li className={liClass} onClick={setIsSidebarOpen}>
-                <Link href='/acercade' className="block w-full">about</Link>
+                <Link href='/acercade' className="block w-full">Acerca de</Link>
             </li>
             <Dropdown liClass={liClass} handleClick={setIsSidebarOpen} />
         </ul>

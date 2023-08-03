@@ -5,7 +5,7 @@ import './globals.css'
 
 const poppins = Poppins({ subsets: ['latin'], style: "normal", weight: ["400"] })
 
-const noto = Noto_Sans({ subsets: ['latin'], style: "normal", weight: "500" })
+const noto = Noto_Sans({ subsets: ['latin'], style: "normal", weight: ["400","500", "600", "700"] })
 
 export const metadata: Metadata = {
   title: 'FOOG | Estudio De Visualización 3D',
