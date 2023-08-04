@@ -32,7 +32,6 @@ export default function Gallery() {
                 sizes={{ size: "calc(100vw - 240px)" }}
                 onClick={({ index: current }) => setIndex(current)}
                 rowConstraints={{ maxPhotos: maxPhoto }}
-
             />
 
             <Lightbox

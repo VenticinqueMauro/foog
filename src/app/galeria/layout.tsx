@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
     return (
         <section className="h-screen px-3 lg:px-10">
-            {children}
+                {children}
         </section>
     )
 }

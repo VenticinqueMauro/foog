@@ -25,6 +25,5 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
             </li>
             <Dropdown liClass={liClass} handleClick={setIsSidebarOpen} />
         </ul>
-
     )
 }
