@@ -75,12 +75,14 @@ const imagePath = [
 ]
 
 
-const photos = imagePath.map(image => ({
+export const photosAlbum = imagePath.map(image => ({
     ...image,
     width: 350,
     height: 300,
+}))
 
+export const photosLightBox = imagePath.map(image => ({
+    ...image,
 }))
 
 
-export default photos;
