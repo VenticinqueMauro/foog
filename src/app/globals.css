@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.textura {
+  background-color: #161f20; /* Color inicial del gradiente */
+  background-image: linear-gradient(to left top, #161f20, #162022, #152223, #152325, #142527, #132729, #13282a, #122a2c, #112c2d, #102e2f, #0e3030, #0d3231), url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+  /* La propiedad background-image permite añadir varios fondos, el gradiente y la textura */
+}
+
 /*SCROLLBAR*/
 ::-webkit-scrollbar {
   width: 6px;
@@ -160,16 +166,4 @@
     0 0 20px rgba(231, 32, 129, 0.6);
 }
 
-.textura {
-  background-color: #141d1e;
-  background-image: url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
-}
 
-/* .customText {
-  background-image: linear-gradient(
-    #d6fb41 25%,
-    #d6fb41 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */

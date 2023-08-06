@@ -7,7 +7,7 @@ import Sidebar from "./menu/Sidebar"
 import ContainerRedes from "./redes/ContainerRedes"
 
 const ulClassDesktop = "items-center hidden gap-1 md:flex"
-const liClassDesktop = "cursor-pointer text-[#ACAA9E] menuItem hover:text-white hover:bg-[#25292B] px-3 py-1 rounded active:text-white focus:text-white capitalize"
+const liClassDesktop = "cursor-pointer text-[#ACAA9E] menuItem hover:text-white hover:bg-[#161f20] px-3 py-1 rounded active:text-white focus:text-white capitalize"
 
 function Navbar() {
 

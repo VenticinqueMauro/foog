@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 import { MdOutlineKitchen, MdOutlineLiving, MdOutlineDinnerDining } from "react-icons/md";
 import { LiaToiletSolid } from "react-icons/lia";
+import { PiArmchair } from "react-icons/pi";
 
 import { ReactNode } from "react";
 import adenture from '../../../../../public/adenture.jpg';
@@ -31,7 +32,7 @@ export const categoryItems: categoryItem[] = [
         name: "estar",
         href: "estar",
         img: pinky,
-        icon: <MdOutlineLiving />
+        icon: <PiArmchair />
     },
     {
         name: "comedor",
