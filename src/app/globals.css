@@ -4,7 +4,22 @@
 
 .textura {
   background-color: #161f20; /* Color inicial del gradiente */
-  background-image: linear-gradient(to left top, #161f20, #162022, #152223, #152325, #142527, #132729, #13282a, #122a2c, #112c2d, #102e2f, #0e3030, #0d3231), url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
+  background-image: linear-gradient(
+      to left top,
+      #161f20,
+      #162022,
+      #152223,
+      #152325,
+      #142527,
+      #132729,
+      #13282a,
+      #122a2c,
+      #112c2d,
+      #102e2f,
+      #0e3030,
+      #0d3231
+    ),
+    url("https://www.transparenttextures.com/patterns/subtle-dark-vertical.png");
   /* La propiedad background-image permite añadir varios fondos, el gradiente y la textura */
 }
 
@@ -139,7 +154,8 @@
   }
 
   .zoomimg:hover {
-    transform: scale(1.005);
+    z-index: 100;
+    transform: scale(1.08) rotate(-1deg);
     opacity: 1;
   }
 }
@@ -166,4 +182,9 @@
     0 0 20px rgba(231, 32, 129, 0.6);
 }
 
-
+.gradient-text {
+  background-image: linear-gradient(to right bottom,#fff 30%,hsla(0,0%,100%,.5));
+  background-clip: text;
+  color: transparent;
+  text-shadow: -1px -1px 0 hsla(0,0%,100%,.2),1px 1px 0 rgba(0,0,0,.1);
+}
