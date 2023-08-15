@@ -33,7 +33,7 @@ export default function ContainerRedes() {
     ]
 
     return (
-        <ul className="hidden md:inline-flex flex items-center gap-4 md:w-[200px] w-auto justify-end md:justify-center">
+        <ul className="hidden lg:inline-flex flex items-center gap-4 md:w-[200px] w-auto justify-end md:justify-center">
             {
                 Redes.map((red, i) => (
                     <li key={i} className="text-xl icon-container">

@@ -152,7 +152,7 @@
   }
 
   .zoomimg:hover {
-    z-index: 40;
+    z-index: 10;
     transform: scale(1.08) rotate(-1deg);
     opacity: 1;
   }

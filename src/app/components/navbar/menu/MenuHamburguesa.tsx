@@ -6,7 +6,7 @@ export default function MenuHamburguesa() {
 
     return (
         <>
-            <label htmlFor="burger" className="block burger md:hidden" >
+            <label htmlFor="burger" className="block burger lg:hidden" >
                 <input id="burger" type="checkbox" checked={isSidebarOpen} onChange={setIsSidebarOpen} />
                 <span></span>
                 <span></span>

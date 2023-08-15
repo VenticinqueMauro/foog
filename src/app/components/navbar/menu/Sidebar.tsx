@@ -13,7 +13,7 @@ export default function Sidebar() {
 
 
     return (
-        <div className='overflow-hidden md:hidden'>
+        <div className='z-50 overflow-hidden lg:hidden'>
             <div
                 className={`${isSidebarOpen ? 'opacity-100' : 'opacity-0 hidden'} transition-opacity duration-100 fixed top-0 z-10 w-full min-h-screen cristal bg-black/20 overflow-hidden`}
                 onClick={setIsSidebarOpen}
