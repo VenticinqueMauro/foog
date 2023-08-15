@@ -31,7 +31,7 @@ export default function Form() {
     return (
         <div className="w-full h-full">
             <form
-                className="flex flex-col max-w-xl p-10 mx-auto border rounded shadow border-zinc-800 rounded-2xl bg-black/50 cristal"
+                className="flex flex-col max-w-xl p-5 mx-auto border rounded shadow md:p-10 border-zinc-800 rounded-2xl bg-black/50 cristal"
                 onSubmit={handleSubmit(submitData)}
             >
                 <label htmlFor="email" className='text-zinc-400'>Dirección de Email: </label>

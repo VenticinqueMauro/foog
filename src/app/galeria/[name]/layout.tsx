@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { name: string } })
 
 export default function layout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="pt-28 ">
+        <div className="pb-10 pt-28">
             {children}
         </div>
     )

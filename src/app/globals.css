@@ -56,10 +56,8 @@
   left: 0;
   right: 0;
   height: 2px;
-  /*background-color: #A4E720; verde fluo*/
-  /*background-color: #73B9A1; verde*/
-  /*background-color: #e72081;*/
-  background-color: #d6fb41;
+  /*background-color: #d6fb41;*/ 
+  background-color: #fff; 
   transform-origin: bottom right;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -98,7 +96,7 @@
   left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
-  background-color: #acaa9e;
+  background-color: #fff;
 }
 
 .burger span:nth-of-type(1) {
@@ -154,7 +152,7 @@
   }
 
   .zoomimg:hover {
-    z-index: 100;
+    z-index: 40;
     transform: scale(1.08) rotate(-1deg);
     opacity: 1;
   }

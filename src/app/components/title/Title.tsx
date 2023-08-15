@@ -8,8 +8,8 @@ export default function Title({ title }: { title: string }) {
 
     return (
         <div className="relative">
-            <h1 className={`${robotoCondensed.className} text-4xl md:text-5xl lg:text-7xl font-bold text-center capitalize text-[#ACAA9E]`} >{title}</h1>
-            <span className="md:text-6xl lg:text-8xl xl:text-9xl font-bold  text-[#ACAA9E]/[0.03] absolute bottom-0  text-center w-full capitalize">{title}</span>
+            <h1 className={`${robotoCondensed.className} text-6xl lg:text-7xl  text-center capitalize gradient-text z-10`} >{title}</h1>
+            <span className="absolute bottom-0 w-full font-bold text-center capitalize -z-10 md:text-6xl lg:text-8xl xl:text-9xl text-zinc-500/20">{title}</span>
         </div>
     )
 }

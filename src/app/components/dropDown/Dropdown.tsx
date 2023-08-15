@@ -60,13 +60,13 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className='dropdown-menu absolute left-0 flex inline-flex flex-col gap-1 p-2 md:rounded top-10 mt-3 ml-3 border-l md:m-0 border-[#ACAA9E] md:border-none md:bg-[#161f20]/90 inline-block'
+                        className='dropdown-menu absolute left-0 flex inline-flex flex-col gap-1 p-2 md:rounded top-10 mt-3 ml-3 border-l md:m-0 border-[#ACAA9E] md:border-none md:bg-zinc-900/90 cristal inline-block'
                     >
                         <Menu.Item>
                             {({ active }) => (
                                 <Link
                                     href={`/galeria`}
-                                    className={`${active && 'bg-[#161716] rounded '} hidden md:block capitalize p-2`}
+                                    className={`${active && 'bg-zinc-200 text-black font-medium  rounded h-full w-full'} hidden md:block capitalize p-2`}
                                     onClick={() => { handleMenuLinkClick(); }}
                                 >
                                     Principal
@@ -81,11 +81,11 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                                         animate={{ opacity: 1, x: 0 }}
                                         exit={{ opacity: 0, x: -10 }}
                                         transition={{ duration: 0.3, delay: index * 0.1 }}
-                                        className={`${active && 'bg-[#161716] rounded '} capitalize p-2 flex items-center gap-1`}
+                                        className={`${active && 'bg-zinc-200 text-black font-medium rounded '} capitalize p-1 flex items-center gap-1`}
                                     >
                                         <Link
                                             href={`/galeria/${item.href}`}
-                                            className={`${active && 'bg-[#161716] rounded '} capitalize p-2 flex items-center gap-1`}
+                                            className={`${active && 'bg-zinc-200 text-black font-medium rounded '} capitalize p-2 flex items-center gap-1`}
                                             onClick={() => { handleMenuLinkClick(); }}
                                         >
                                             <span>{item.icon ?? null}</span>
