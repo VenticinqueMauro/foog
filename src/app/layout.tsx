@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Noto_Sans, Poppins } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
+import Footer from './components/footer/Footer'
 
 const poppins = Poppins({ subsets: ['latin'], style: "normal", weight: ["400"] })
 
@@ -31,8 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${noto.className} relative min-h-screen w-full text-zinc-400 bg-black `}>
-          <Navbar />
-          {children}
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   )
