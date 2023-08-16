@@ -5,7 +5,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function BreadCrumb({ params }: { params: { name: string } }) {
     return (
-        <div className="flex items-center gap-1 mb-10 capitalize">
+        <div className="flex items-center gap-1 mb-5 capitalize">
             <Link href='/' className="flex items-center gap-1 hover:text-[#d6fb41] ">
                 <AiFillHome className="text-lg " />
             </Link>

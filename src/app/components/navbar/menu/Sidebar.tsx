@@ -19,7 +19,7 @@ export default function Sidebar() {
                 onClick={setIsSidebarOpen}
             ></div>
             <section
-                className={`${isSidebarOpen ? 'w-60 opacity-100' : 'w-0 opacity-0'} transition-all duration-300 fixed top-0 left-0 z-20 min-h-screen  bg-black py-3 shadow`}
+                className={`${isSidebarOpen ? 'w-60 opacity-100' : 'w-0 opacity-0 pointer-events-none'} transition-all duration-300 fixed top-0 left-0 z-20 min-h-screen  bg-black py-3 shadow`}
             >
                 <ContainerMenu ulClass={ulClassMobile} liClass={liClassMobile} />
             </section>
