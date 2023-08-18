@@ -62,17 +62,19 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
                         transition={{ duration: 0.3 }}
                         className='dropdown-menu absolute left-0 flex inline-flex flex-col gap-1 p-2 md:rounded top-10 mt-3 ml-3 border-l md:m-0 border-[#ACAA9E] md:border-none md:bg-zinc-900/90 cristal inline-block'
                     >
-                        <Menu.Item >
-                            {({ active }) => (
-                                <Link
-                                    href={`/galeria`}
-                                    className={`${active && 'bg-zinc-200 text-black font-medium  rounded h-full w-full'} hidden md:block capitalize p-2`}
-                                    onClick={() => { handleMenuLinkClick(); }}
-                                >
-                                    Principal
-                                </Link>
-                            )}
-                        </Menu.Item>
+                        <Link
+                            href={`/galeria`}>
+                            <Menu.Item >
+                                {({ active }) => (
+                                    <span
+                                        className={`${active && 'bg-zinc-200 text-black font-medium  rounded h-full w-full'} hidden md:block capitalize p-2`}
+                                        onClick={() => { handleMenuLinkClick(); }}
+                                    >
+                                        Principal
+                                    </span>
+                                )}
+                            </Menu.Item>
+                        </Link>
                         {categoryItems.map((item, index) => (
                             <Menu.Item key={item.name}>
                                 {({ active }) => (

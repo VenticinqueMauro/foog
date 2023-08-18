@@ -2,35 +2,36 @@ import { FaArtstation, FaBehance, FaInstagram, FaLinkedinIn, FaFacebookF } from 
 import RedItem from "./RedItem";
 import { ReactNode } from "react";
 
-interface Red {
+export interface Red {
     icon: ReactNode
     href: string
 }
 
+export const Redes: Red[] = [
+    {
+        icon: <FaBehance />,
+        href: "#"
+    },
+    {
+        icon: <FaInstagram />,
+        href: "#"
+    },
+    {
+        icon: <FaLinkedinIn />,
+        href: "#"
+    },
+    {
+        icon: <FaArtstation />,
+        href: "#"
+    },
+    {
+        icon: <FaFacebookF />,
+        href: "#"
+    },
+]
+
 export default function ContainerRedes() {
 
-    const Redes: Red[] = [
-        {
-            icon: <FaBehance />,
-            href: "#"
-        },
-        {
-            icon: <FaInstagram />,
-            href: "#"
-        },
-        {
-            icon: <FaLinkedinIn />,
-            href: "#"
-        },
-        {
-            icon: <FaArtstation />,
-            href: "#"
-        },
-        {
-            icon: <FaFacebookF />,
-            href: "#"
-        },
-    ]
 
     return (
         <ul className="hidden lg:inline-flex flex items-center gap-4 md:w-[200px] w-auto justify-end md:justify-center">
