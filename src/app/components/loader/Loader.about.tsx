@@ -1,4 +1,4 @@
-const skeletonArray = Array.from({ length: 30 });
+const skeletonArray = Array.from({ length: 15 });
 
 export default function LoaderAbout() {
 

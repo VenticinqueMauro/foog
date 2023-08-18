@@ -13,7 +13,7 @@ export default function TitleAndDescription() {
                 <span className="w-full border border-zinc-700"></span>
                 {
                     Redes.map((red, i) => (
-                        <Link key={i} href={red.href} className="text-2xl transition-all duration-200 ease-linear transform hover:text-white hover:scale-110">{red.icon}</Link>
+                        <Link key={i} href={red.href} className="text-lg transition-all duration-200 ease-linear transform md:text-2xl hover:text-white hover:scale-110">{red.icon}</Link>
                     ))
                 }
                 <span className="w-full border border-zinc-700"></span>

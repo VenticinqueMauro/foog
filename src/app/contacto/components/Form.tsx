@@ -64,7 +64,7 @@ export default function Form() {
                 />
                 {
                     errors.user_email &&
-                    <span className='p-1 text-red-600 rounded bg-red-400/20'>
+                    <span className='p-1 text-xs text-red-600 rounded xl:text-sm bg-red-400/20'>
                         {errors.user_email.message}
                     </span>
                 }
@@ -77,7 +77,7 @@ export default function Form() {
                 />
                 {
                     errors.message &&
-                    <span className='p-1 text-red-600 rounded bg-red-400/20'>
+                    <span className='p-1 text-xs text-red-600 rounded xl:text-sm bg-red-400/20'>
                         {errors.message.message}
                     </span>
                 }
