@@ -5,7 +5,7 @@ import { categoryItems } from "./categoryItem";
 
 export default function CategoryContainer() {
     return (
-        <div className="flex flex-col h-screen gap-2 pt-24 md:pt-32 lg:overflow-y-hidden ">
+        <div className="flex flex-col h-screen gap-2 pt-24 md:pt-28 lg:overflow-y-hidden ">
             <Title title={'galería de imagenes'} />
             <div className="flex items-center justify-center flex-grow">
                 {categoryItems.map((item, i) => (
