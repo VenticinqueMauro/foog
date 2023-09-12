@@ -1,13 +1,4 @@
 {
-  "name": "fogg",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
     "@emailjs/browser": "3.11.0",
     "@headlessui/react": "^1.7.16",
@@ -17,10 +8,12 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.7.0",
+    "cloudinary": "^1.40.0",
     "clsx": "^2.0.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "framer-motion": "^10.15.0",
+    "mongoose": "^7.4.5",
     "next": "13.4.10",
     "postcss": "8.4.26",
     "react": "18.2.0",
@@ -35,6 +28,15 @@
     "typescript": "5.1.6",
     "yet-another-react-lightbox": "^3.11.4",
     "zod": "3.21.4",
-    "zustand": "^4.4.0"
-  }
+    "zustand": "^4.4.1"
+  },
+  "name": "fogg",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "version": "0.1.0"
 }

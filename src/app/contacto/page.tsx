@@ -1,4 +1,4 @@
-import PageTransitions from "../components/framer/PageTransition";
+import PageTransitions from "@/components/framer/PageTransition";
 import ContainerAll from "./components/ContainerAll";
 
 

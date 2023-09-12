@@ -186,3 +186,37 @@
   color: transparent;
   text-shadow: -1px -1px 0 hsla(0,0%,100%,.2),1px 1px 0 rgba(0,0,0,.1);
 }
+
+
+
+/* Definimos algunas variables personalizadas */
+:root {
+  --dot-size: 2px; /* Tamaño de los puntos */
+  --animation-duration: 100s; /* Duración de la animación */
+  --background-move-distance: 0; /* Comenzar desde abajo (0) hacia arriba */
+  --dot-spacing: 20px; /* Espaciado entre los puntos */
+}
+
+/* Esta regla de animación aplica la animación llamada "dotScroll" */
+@keyframes dotScroll {
+  0% {
+    background-position: 0 100%; /* Comienza desde abajo */
+  }
+  100% {
+    background-position: 0 0; /* Llega a la parte superior */
+  }
+}
+
+/* Aplicamos la animación y las propiedades a un elemento con clase "dot-container" */
+.dot-container {
+  animation: dotScroll var(--animation-duration) linear infinite;
+  background-image: radial-gradient(circle, #2e3c51 var(--dot-size), transparent 0);
+  /* Aumenta el espaciado entre los puntos */
+  background-size: 100px calc((100% / 7) - 1px + var(--dot-spacing));
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -1;
+}
+
+

@@ -1,4 +1,4 @@
-import { Redes } from "@/app/components/navbar/redes/ContainerRedes";
+import { Redes } from "@/components/navbar/redes/ContainerRedes";
 import Link from "next/link";
 
 export default function TitleAndDescription() {
