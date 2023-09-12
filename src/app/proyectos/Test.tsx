@@ -30,14 +30,8 @@ export default async function TestGallery({ name }: Folder) {
 
     console.log(resources.length)
     return (
-
         <div className="flex gap-2 pt-24 overflow-x-hidden md:pt-28">
-            <div className="relative w-1/6 h-full ">
-                <div className="fixed top-24 left-10 ">
-                    <p className="px-2 py-1 mb-2 text-2xl underline text-zinc-200">Proyectos</p>
-                    <MapFolders folders={folders} resources={resources} />
-                </div>
-            </div>
+            <MapFolders folders={folders} resources={resources} />
             <div className="w-full h-full mb-20">
                 <Gallery />
             </div>
