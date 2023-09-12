@@ -23,12 +23,12 @@ export default async function TestGallery({ name }: Folder) {
     const { folders }: { folders: Folder[] } = await cloudinary.v2.api.root_folders();
 
     const { resources }: { resources: SearchResult[] } = await cloudinary.v2.search
-        .expression(`resource_type:image`)
+        // .expression(`resource_type:image`)
         .sort_by('public_id', 'desc')
-        .max_results(30)
+        .max_results(100)
         .execute()
 
-
+    console.log(resources.length)
     return (
 
         <div className="flex gap-2 pt-24 overflow-x-hidden md:pt-28">
