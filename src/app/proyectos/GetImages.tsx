@@ -18,7 +18,7 @@ export type SearchResult = {
     heigth: string
 }
 
-export default async function TestGallery({ name }: Folder) {
+export default async function GetImages() {
 
     const { folders }: { folders: Folder[] } = await cloudinary.v2.api.root_folders();
 
@@ -28,13 +28,10 @@ export default async function TestGallery({ name }: Folder) {
         .max_results(100)
         .execute()
 
-    console.log(resources.length)
     return (
-        <div className="flex gap-2 pt-24 overflow-x-hidden md:pt-28">
+        <div className="flex flex-col pt-24 overflow-x-hidden gap-y-20 xl:gap-2 xl:flex-row md:pt-28">
             <MapFolders folders={folders} resources={resources} />
-            <div className="w-full h-full mb-20">
-                <Gallery />
-            </div>
+            <Gallery />
         </div>
     )
 }

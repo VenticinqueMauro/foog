@@ -43,7 +43,7 @@ export default function Gallery() {
     }, []);
 
     return (
-        <>
+        <div className="w-full h-full mb-20">
             <PhotoAlbum
                 layout="rows"
                 photos={transformedResources}
@@ -63,6 +63,6 @@ export default function Gallery() {
                 render={{ slide: NextJsImage }}
                 plugins={[Download, Slideshow, Fullscreen, Zoom]}
             />
-        </>
+        </div>
     );
 }
