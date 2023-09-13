@@ -6,12 +6,12 @@ export const metadata: Metadata = {
     description: '¿Quieres ponerte en contacto con nosotros? Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto para hablar con nuestro equipo. ¡Esperamos saber de ti pronto!',
     keywords: 'Contacto, FOOG, Estudio de Visualización, Formulario de Contacto, Datos de Contacto',
     robots: 'index, follow',
-    openGraph: {
-        title: 'Contacto | FOOG | Estudio De Visualización 3D',
-        description: '¿Quieres ponerte en contacto con nosotros? Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto para hablar con nuestro equipo. ¡Esperamos saber de ti pronto!',
-        url: 'http://localhost:3000/contacto',
-        type: 'website',
-    },
+    // openGraph: {
+    //     title: 'Contacto | FOOG | Estudio De Visualización 3D',
+    //     description: '¿Quieres ponerte en contacto con nosotros? Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto para hablar con nuestro equipo. ¡Esperamos saber de ti pronto!',
+    //     url: 'http://localhost:3000/contacto',
+    //     type: 'website',
+    // },
 };
 
 

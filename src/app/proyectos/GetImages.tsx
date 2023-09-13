@@ -1,7 +1,7 @@
 
 import Gallery from "@/components/galeria/Gallery";
 import cloudinary from "cloudinary";
-import MapFolders from "./MapFolders";
+import ProjectList from "./ProjectList";
 
 
 export type Folder = {
@@ -23,14 +23,14 @@ export default async function GetImages() {
     const { folders }: { folders: Folder[] } = await cloudinary.v2.api.root_folders();
 
     const { resources }: { resources: SearchResult[] } = await cloudinary.v2.search
-        // .expression(`resource_type:image`)
+        .expression(`resource_type:image`)
         .sort_by('public_id', 'desc')
         .max_results(100)
         .execute()
 
     return (
         <div className="flex flex-col pt-24 overflow-x-hidden gap-y-20 xl:gap-2 xl:flex-row md:pt-28">
-            <MapFolders folders={folders} resources={resources} />
+            <ProjectList folders={folders} resources={resources} />
             <Gallery />
         </div>
     )
