@@ -19,8 +19,8 @@ export default function Form() {
     const form: any = useRef();
 
     const schema: ZodType<FormData> = z.object({
-        user_email: z.string().email({ message: "Dirección de correo electrónico inválida" }),
-        message: z.string().min(20, { message: "La consulta debe contener al menos 20 carácter(es)" }).max(500, { message: "La consulta debe contener un máximo de 500 caracteres" })
+        user_email: z.string().email({ message: "Invalid email address" }),
+        message: z.string().min(20, { message: "The query must contain at least 20 character(s)." }).max(500, { message: "The query must have a maximum of 500 characters" })
     });
 
 
@@ -32,14 +32,14 @@ export default function Form() {
         toast.promise(
             emailjs.sendForm('service_u8e10ad', 'template_ao7vv8s', form.current, 'NzdOOQuatMXE7PrQn'),
             {
-                loading: 'Enviando correo...',
+                loading: 'Sending email...',
                 success: (result) => {
                     console.log(result.text);
-                    return '¡Correo enviado con éxito!';
+                    return 'Email sent successfully!';
                 },
                 error: (error) => {
                     console.log(error.text);
-                    return '¡Ups! Algo salió mal.';
+                    return 'Oops! Something went wrong';
                 },
             }
         );
@@ -54,11 +54,11 @@ export default function Form() {
                 className="flex flex-col max-w-xl p-5 mx-auto border rounded shadow md:p-10 border-zinc-800 rounded-2xl bg-black/50 cristal"
                 onSubmit={handleSubmit(submitData)}
             >
-                <label htmlFor="email" className='text-zinc-400'>Dirección de Email: </label>
+                <label htmlFor="email" className='text-zinc-400'>Email Address: </label>
                 <input
                     type="email"
                     id="email"
-                    placeholder="ejemplo@ejemplo.com"
+                    placeholder="example@example.com"
                     className="p-1 mt-3 mb-3 text-white border rounded bg-[rgba(214,251,252,.057)] placeholder:px-1 placeholder:opacity-50 border-zinc-800"
                     {...register("user_email")}
                 />
@@ -68,10 +68,10 @@ export default function Form() {
                         {errors.user_email.message}
                     </span>
                 }
-                <label htmlFor="consulta" className='mt-5 text-zinc-400'>¿En qué podemos ayudarte? </label>
+                <label htmlFor="consulta" className='mt-5 text-zinc-400'>How can we assist you?</label>
                 <textarea
                     id="consulta"
-                    placeholder="Ingresa tu consulta aquí"
+                    placeholder="Enter your query here"
                     className="h-32 mt-3 p-1 mb-3 text-white border rounded resize-none bg-[rgba(214,251,252,.057)] placeholder:px-1 placeholder:opacity-50 border-zinc-800"
                     {...register("message")}
                 />
@@ -85,7 +85,7 @@ export default function Form() {
                     type="submit"
                     className="flex items-center inline-block gap-1 px-3 py-2 mt-5 font-semibold text-black rounded bg-zinc-300 me-auto"
                 >
-                    Enviar
+                    Send
                     <MdOutlineArrowRight className='text-2xl' /></button>
             </form>
             <Toaster  />
