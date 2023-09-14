@@ -1,19 +1,26 @@
 "use client";
+import image1 from '../../../public/1.jpg';
+import image2 from '../../../public/2.jpg';
+import image3 from '../../../public/3.jpg';
+import image4 from '../../../public/4.jpg';
+import image5 from '../../../public/5.jpg';
+import image6 from '../../../public/6.jpg';
+import image7 from '../../../public/7.jpg';
 
 import { useEffect, useState } from 'react';
 
 const images = [
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688541/Presentacion/Marenco_003_fwqwpy.jpg',
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688537/Presentacion/bb_001_gpl53f.jpg',
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688534/Presentacion/Ecoreserva004_oqr6kv.jpg',
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688532/Presentacion/render_002_l5wylo.jpg',
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688525/Presentacion/estar_edit_zpb4p3.jpg',
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688504/Presentacion/quincho_001_edit_k2csjb.jpg',
-    'https://res.cloudinary.com/dqftmoekg/image/upload/v1694688477/Presentacion/parques_del_yacht_gym_yhx13m.jpg',
-
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
 ];
 
 const ImageSlider = () => {
+    
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -39,7 +46,7 @@ const ImageSlider = () => {
                     <div
                         key={index}
                         className="w-screen h-screen bg-center bg-cover"
-                        style={{ backgroundImage: `url(${image})` }}
+                        style={{ backgroundImage: `url(${image.src})` }}
                     ></div>
                 ))}
             </div>

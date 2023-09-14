@@ -25,7 +25,7 @@ export default async function GetImages() {
     const { resources }: { resources: SearchResult[] } = await cloudinary.v2.search
         .expression(`resource_type:image`)
         .sort_by('public_id', 'desc')
-        .max_results(100)
+        .max_results(150)
         .execute()
 
 
