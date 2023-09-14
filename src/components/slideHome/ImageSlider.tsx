@@ -27,7 +27,7 @@ const ImageSlider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 4000);
+        }, 5000);
 
         return () => {
             clearInterval(interval);
@@ -37,7 +37,7 @@ const ImageSlider = () => {
     return (
         <div className="relative w-screen h-screen overflow-hidden">
             <div
-                className="flex transition-transform duration-1000"
+                className="flex transition-transform duration-3000"
                 style={{
                     transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
                     width: `${images.length * 100}%`,
