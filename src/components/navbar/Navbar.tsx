@@ -14,7 +14,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 z-20 flex flex-row-reverse items-center justify-between w-full px-6 py-3 text-zinc-300 bg-black/10 md:px-10 lg:flex-row cristal">
+            <nav className="fixed top-0 left-0 z-20 flex flex-row-reverse items-center justify-between w-full px-6 py-3 text-zinc-100 bg-black/10 md:px-10 lg:flex-row cristal">
                 <MenuHamburguesa  />
                 <Logo />
                 <ContainerMenu ulClass={ulClassDesktop} liClass={liClassDesktop} />
