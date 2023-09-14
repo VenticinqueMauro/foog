@@ -1,4 +1,5 @@
 "use client";
+
 import image1 from '../../../public/1.jpg';
 import image2 from '../../../public/2.jpg';
 import image3 from '../../../public/3.jpg';
@@ -36,7 +37,7 @@ const ImageSlider = () => {
     return (
         <div className="relative w-screen h-screen overflow-hidden">
             <div
-                className="flex transition-transform duration-500"
+                className="flex transition-transform duration-1000"
                 style={{
                     transform: `translateX(-${currentIndex * (100 / images.length)}%)`,
                     width: `${images.length * 100}%`,

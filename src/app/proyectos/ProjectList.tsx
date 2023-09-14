@@ -44,27 +44,6 @@ export default function ProjectList({ folders, resources }: Props) {
                     <p className="mt-1 font-semibold text-zinc-200">Projects</p>
                 </div>
                 <ul className='flex flex-col items-start hidden w-full gap-1 py-1 capitalize border border-transparent rounded-md cursor-pointer text-foreground xl:inline-flex'>
-                    <li
-                        className={`${proyecto === 'Presentacion' && 'text-zinc-300 underline'
-                            } group inline-block hover:underline flex hover:text-zinc-300  gap-1`}
-                        onClick={() => handleFilterByFolder('Presentacion')}
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className={`${proyecto === 'Presentacion' ? 'block' : 'hidden'} w-6 h-6`}
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                        </svg>
-                        Random 
-                    </li>
                     {
                         folders.map((folder: Folder) => (
                             <li
