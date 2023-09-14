@@ -5,7 +5,7 @@ type Store = {
     isSidebarOpen: boolean;
     folder: string;
     recursos: SearchResult[];
-    images: SearchResult[]
+    images: SearchResult[];
     setIsSidebarOpen: () => void;
     setFolder: (folder: string) => void;
     setRecursos: (resources: SearchResult[]) => void;
@@ -18,6 +18,7 @@ export const useStore = create<Store>()((set) => ({
     folder: 'ramdom',
     recursos: [],
     images: [],
+    imagesPresentations: [],
     setIsSidebarOpen: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
     setFolder: (folder) => set({ folder }),
     setRecursos: (resources) => set({ recursos: resources }),
@@ -26,5 +27,5 @@ export const useStore = create<Store>()((set) => ({
         set((state) => ({
             images: state.recursos.filter((image) => image.folder === folder),
         }));
-    },
+    }
 }));

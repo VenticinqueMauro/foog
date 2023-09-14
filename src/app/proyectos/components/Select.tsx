@@ -46,6 +46,29 @@ export default function Select({ folders, handleFilterByFolder }: Props) {
                         leaveTo="opacity-0"
                     >
                         <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base border rounded bg-zinc-900 max-h-60 ring-1 ring-black ring-opacity-5 border-zinc-700 focus:outline-none sm:text-sm">
+                        <Listbox.Option
+                                    className={({ active }) =>
+                                        `relative cursor-default select-none py-2 pl-10 pr-4   ${active ? 'bg-zinc-700 text-zinc-300' : 'text-gray-300'}`
+                                    }
+                                    value='Presentacion'
+                                    onClick={() => handleFilterByFolder('Presentacion')}
+                                >
+                                    {({ selected }) => (
+                                        <>
+                                            <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
+                                                Random
+                                            </span>
+                                            {selected ? (
+                                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M5 12l5 5l10 -10"></path>
+                                                    </svg>
+                                                </span>
+                                            ) : null}
+                                        </>
+                                    )}
+                                </Listbox.Option>
                             {folders.map((project, personIdx) => (
                                 <Listbox.Option
                                     key={personIdx}

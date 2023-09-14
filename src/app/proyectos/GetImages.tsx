@@ -28,6 +28,7 @@ export default async function GetImages() {
         .max_results(100)
         .execute()
 
+
     return (
         <div className="flex flex-col pt-24 overflow-x-hidden gap-y-20 xl:gap-2 xl:flex-row md:pt-28">
             <ProjectList folders={folders} resources={resources} />
