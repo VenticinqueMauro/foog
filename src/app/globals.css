@@ -46,6 +46,7 @@
   position: relative;
 }
 
+
 .menuItem::before {
   content: "";
   position: absolute;
@@ -53,7 +54,6 @@
   left: 0;
   right: 0;
   height: 2px;
-  /*background-color: #d6fb41;*/ 
   background-color: #fff; 
   transform-origin: bottom right;
   transform: scaleX(0);

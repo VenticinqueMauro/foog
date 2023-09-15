@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { SearchResult } from '../proyectos/GetImages';
+import { SearchResult } from '../projects/GetImages';
 
 type Store = {
     isSidebarOpen: boolean;
