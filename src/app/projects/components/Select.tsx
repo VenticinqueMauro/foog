@@ -73,7 +73,6 @@ export default function Select({ folders, handleFilterByFolder }: Props) {
                                 </Listbox.Option>
                             ))}
                         </Listbox.Options>
-
                     </Transition>
                 </div>
             </Listbox>

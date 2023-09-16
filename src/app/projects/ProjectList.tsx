@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useStore } from "../store/store";
 import { Folder, SearchResult } from "./GetImages";
+import { motion } from "framer-motion";
 import Select from "./components/Select";
 
 interface Props {
@@ -45,9 +46,12 @@ export default function ProjectList({ folders, resources }: Props) {
                 </div>
                 <ul className='flex flex-col items-start hidden w-full gap-1 py-1 capitalize border border-transparent rounded-md cursor-pointer text-foreground xl:inline-flex'>
                     {
-                        folders.map((folder: Folder) => (
-                            <li
+                        folders.map((folder: Folder, index: number) => (
+                            <motion.li
                                 key={folder.name}
+                                initial={{ x: -100, opacity: 0 }} 
+                                animate={{ x: 0, opacity: 1 }} 
+                                transition={{ delay: index * 0.2 }} 
                                 className={`${folder.name === proyecto && 'text-zinc-300 underline'
                                     } ${folder.name === 'Presentacion' ? 'hidden' : 'xl:inline-flex'} group inline-block hover:underline hover:text-zinc-300 gap-1`}
                                 onClick={() => handleFilterByFolder(folder.name)}
@@ -71,7 +75,7 @@ export default function ProjectList({ folders, resources }: Props) {
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" strokeWidth="0" fill="currentColor"></path>
                                 </svg>
-                            </li>
+                            </motion.li>
                         ))
                     }
                 </ul>
