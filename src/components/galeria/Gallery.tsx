@@ -1,7 +1,7 @@
 "use client";
 
 import useResize from "@/app/hooks/useResize";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import Download from "yet-another-react-lightbox/plugins/download";
@@ -12,6 +12,7 @@ import "yet-another-react-lightbox/styles.css";
 import ImageGallery from "./ImageGallery";
 import NextJsImage from "./NextImage";
 import { useStore } from "@/app/store/store";
+import LoaderGalleryPhotos from "../loader/Loader.gallery.photos";
 
 export default function Gallery() {
     const { maxPhoto } = useResize();
@@ -25,7 +26,7 @@ export default function Gallery() {
         ...item,
         src: item.secure_url,
         width: 300,
-        height: 250,
+        height: 250
     }));
 
     const photosLightBox = transformedResources.map((image) => ({
@@ -44,16 +45,16 @@ export default function Gallery() {
 
     return (
         <div className="w-full h-full mb-20">
-            <PhotoAlbum
-                layout="rows"
-                photos={transformedResources}
-                spacing={5}
-                renderPhoto={ImageGallery}
-                defaultContainerWidth={1200}
-                sizes={{ size: "calc(100vw - 240px)" }}
-                onClick={handlePhotoClick}
-                rowConstraints={{ maxPhotos: maxPhoto }}
-            />
+                <PhotoAlbum
+                    layout="rows"
+                    photos={transformedResources}
+                    spacing={5}
+                    renderPhoto={ImageGallery}
+                    defaultContainerWidth={1200}
+                    sizes={{ size: "calc(100vw - 240px)" }}
+                    onClick={handlePhotoClick}
+                    rowConstraints={{ maxPhotos: maxPhoto }}
+                />
 
             <Lightbox
                 index={index}
