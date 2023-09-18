@@ -1,9 +1,11 @@
-import LoaderGalleryPhotos from '@/components/loader/Loader.gallery.photos'
+import PageTransitions from '@/components/framer/PageTransition'
 import TestGallery from './GetImages'
 
 export default function page() {
 
     return (
-        <TestGallery />
+        <PageTransitions>
+            <TestGallery />
+        </PageTransitions>
     )
 }
