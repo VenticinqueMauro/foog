@@ -31,7 +31,7 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
 
     const { setIsSidebarOpen, isSidebarOpen } = useStore();
 
-    const isMobile = useMediaQuery('(max-width: 768px)');
+    const isMobile = useMediaQuery('(max-width: 1023px)');
 
     return (
         <ul className={ulClass}>
@@ -46,7 +46,7 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
                         className={liClass}
                         onClick={setIsSidebarOpen}
                     >
-                        <Link href={path.href} className={`block w-full text-3xl md:text-lg`}>{path.name}</Link>
+                        <Link href={path.href} className={`block w-full text-3xl lg:text-lg`}>{path.name}</Link>
                     </motion.li>
                 ))
             }
