@@ -49,9 +49,9 @@ export default function ProjectList({ folders, resources }: Props) {
                         folders.map((folder: Folder, index: number) => (
                             <motion.li
                                 key={folder.name}
-                                initial={{ x: -100, opacity: 0 }} 
-                                animate={{ x: 0, opacity: 1 }} 
-                                transition={{ delay: index * 0.2 }} 
+                                initial={{ x: -100, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ delay: index * 0.15 }}
                                 className={`${folder.name === proyecto && 'text-zinc-300 underline'
                                     } ${folder.name === 'Presentacion' ? 'hidden' : 'xl:inline-flex'} group inline-block hover:underline hover:text-zinc-300 gap-1`}
                                 onClick={() => handleFilterByFolder(folder.name)}

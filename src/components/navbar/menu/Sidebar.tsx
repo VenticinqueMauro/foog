@@ -10,7 +10,7 @@ const liClassMobile = "p-2 rounded  hover:border  w-full capitalize"
 export default function Sidebar() {
 
     const { isSidebarOpen, setIsSidebarOpen } = useStore()
-
+    
 
     return (
         <div className='z-50 overflow-hidden lg:hidden'>
@@ -19,7 +19,7 @@ export default function Sidebar() {
                 onClick={setIsSidebarOpen}
             ></div>
             <section
-                className={`${isSidebarOpen ? 'w-60 opacity-100' : 'w-0 opacity-0 pointer-events-none'} transition-all duration-300 fixed top-0 left-0 z-20 min-h-screen  bg-black py-3 shadow`}
+                className={`${isSidebarOpen ? 'w-60 opacity-100' : 'w-0 opacity-0 pointer-events-none'} transition-all duration-500 fixed top-0 left-0 z-20 min-h-screen  bg-black py-3 shadow shadow-black`}
             >
                 <ContainerMenu ulClass={ulClassMobile} liClass={liClassMobile} />
             </section>
