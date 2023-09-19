@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-contact {
+.bg-contact { //test
   background-color: #000000;
   background-image: url("https://c4.wallpaperflare.com/wallpaper/417/673/89/black-texture-background-wallpaper-thumb.jpg");
   background-repeat: no-repeat;
