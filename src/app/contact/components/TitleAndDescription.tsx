@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function TitleAndDescription() {
 
 
-
     return (
         <div className="w-full h-full text-center sm:text-start">
             <h2 className="pb-5 text-6xl font-medium font-bold lg:text-8xl gradient-text">From concept to reality</h2>

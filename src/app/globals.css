@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.bgAll {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
 .textura {
   background-color: #161f20; /* Color inicial del gradiente */
   background-image: linear-gradient(
@@ -39,13 +45,11 @@
   border-radius: 10px;
 }
 
-
 /*MENU ITEMS*/
 
 .menuItem {
   position: relative;
 }
-
 
 .menuItem::before {
   content: "";
@@ -54,7 +58,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #fff; 
+  background-color: #fff;
   transform-origin: bottom right;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -163,7 +167,7 @@
 }
 
 .cristal {
-background: #0005;
+  background: #0005;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
@@ -179,13 +183,15 @@ background: #0005;
 }
 
 .gradient-text {
-  background-image: linear-gradient(to right bottom,#fff 30%,hsla(0,0%,100%,.5));
+  background-image: linear-gradient(
+    to right bottom,
+    #fff 30%,
+    hsla(0, 0%, 100%, 0.5)
+  );
   background-clip: text;
   color: transparent;
-  text-shadow: -1px -1px 0 hsla(0,0%,100%,.2),1px 1px 0 rgba(0,0,0,.1);
+  text-shadow: -1px -1px 0 hsla(0, 0%, 100%, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
-
-
 
 /* Definimos algunas variables personalizadas */
 :root {
@@ -208,7 +214,11 @@ background: #0005;
 /* Aplicamos la animación y las propiedades a un elemento con clase "dot-container" */
 .dot-container {
   animation: dotScroll var(--animation-duration) linear infinite;
-  background-image: radial-gradient(circle, #2e3c51 var(--dot-size), transparent 0);
+  background-image: radial-gradient(
+    circle,
+    #2e3c51 var(--dot-size),
+    transparent 0
+  );
   /* Aumenta el espaciado entre los puntos */
   background-size: 100px calc((100% / 7) - 1px + var(--dot-spacing));
   width: 100%;
@@ -216,5 +226,3 @@ background: #0005;
   margin-left: auto;
   z-index: -1;
 }
-
-
