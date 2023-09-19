@@ -10,7 +10,7 @@
 }
 
 .textura {
-  background-color: #161f20; /* Color inicial del gradiente */
+  background-color: #161f20; 
   background-image: linear-gradient(
       to left top,
       #161f20,
