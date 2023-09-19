@@ -51,7 +51,7 @@ export default function Form() {
         <div className="w-full h-full">
             <form
                 ref={form} // corroborar type
-                className="flex flex-col max-w-xl p-5 mx-auto border rounded shadow md:p-10 border-zinc-800 rounded-2xl bg-black/50 cristal"
+                className="flex flex-col max-w-xl p-5 mx-auto mb-10 border rounded shadow md:mb-0 md:p-10 border-zinc-800 rounded-2xl cristalForm"
                 onSubmit={handleSubmit(submitData)}
             >
                 <label htmlFor="email" className='text-zinc-400'>Email Address: </label>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode, params: { name: string } }) {
     return (
-        <section className="min-h-screen px-6 pt-24 pb-10 md:pt-28 lg:px-10 bg-contact">
+        <section className="min-h-screen px-6 pt-24 pb-10 md:pt-28 lg:px-10">
             {children}
         </section>
     )
