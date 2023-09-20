@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,9 +12,12 @@
 
 .sideBar {
   background-color: #000000;
-background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+.sideBarText{
+  font-family: 'Rubik Marker Hatch', cursive;}
 
 .textura {
   background-color: #161f20;

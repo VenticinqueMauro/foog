@@ -1,7 +1,6 @@
 import { useStore } from '@/app/store/store';
 import ContainerMenu from './ContainerMenu';
 
-
 const ulClassMobile = "flex flex-col items-start gap-2 px-6 py-6 "
 const liClassMobile = "p-2 rounded  hover:border  w-full capitalize"
 

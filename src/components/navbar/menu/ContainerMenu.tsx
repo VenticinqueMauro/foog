@@ -40,13 +40,13 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
                     <motion.li
                         key={path.name}
                         initial={isMobile ? { x: -100, opacity: 0 } : { opacity: 0 }}
-                        animate={isSidebarOpen ? (isMobile ? { x: 0, opacity: 1 } : { opacity: 1 }) : {opacity: 1}}
+                        animate={isSidebarOpen ? (isMobile ? { x: 0, opacity: 1 } : { opacity: 1 }) : { opacity: 1 }}
                         exit={isMobile ? { x: -100, opacity: 0 } : { opacity: 0 }}
                         transition={{ delay: i * (isMobile ? 0.13 : 0.2) }}
                         className={liClass}
                         onClick={setIsSidebarOpen}
                     >
-                        <Link href={path.href} className={`block w-full text-3xl lg:text-lg`}>{path.name}</Link>
+                        <Link href={path.href} className={`${isMobile && 'sideBarText'} block w-full text-3xl lg:text-lg `}>{path.name}</Link>
                     </motion.li>
                 ))
             }
