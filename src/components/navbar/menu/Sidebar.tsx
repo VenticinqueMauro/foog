@@ -1,8 +1,8 @@
 import { useStore } from '@/app/store/store';
 import ContainerMenu from './ContainerMenu';
 
-const ulClassMobile = "flex flex-col items-start gap-2 px-6 py-6 "
-const liClassMobile = "p-2 rounded  hover:border  w-full capitalize"
+const ulClassMobile = "flex flex-col items-start  gap-2 px-6 py-6 h-screen "
+const liClassMobile = "p-2 rounded  hover:border  w-full capitalize text-center"
 
 
 
@@ -21,7 +21,7 @@ export default function Sidebar() {
                 className={`${isSidebarOpen
                         ? 'w-60 opacity-100 transition-all duration-75 ease-linear'
                         : 'w-0 opacity-0 pointer-events-none transition-all duration-300 ease-linear'
-                    } fixed top-0 left-0 z-20 min-h-screen bg-black py-3 shadow shadow-black sideBar`}
+                    } fixed top-0 left-0 z-20 min-h-screen bg-black py-3 shadow shadow-black bgAll`}
             >
                 <ContainerMenu ulClass={ulClassMobile} liClass={liClassMobile} />
             </section>

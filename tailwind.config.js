@@ -21,6 +21,7 @@ module.exports = {
         '2000': '2000ms',
         '2500': '2500ms',
         '3000': '3000ms',
+        '10000':'10000ms'
       },
       colors: {
         border: "hsl(var(--border))",

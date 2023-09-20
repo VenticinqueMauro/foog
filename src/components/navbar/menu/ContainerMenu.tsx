@@ -4,6 +4,7 @@ import { useStore } from "@/app/store/store";
 import Link from "next/link";
 import { useMediaQuery } from '@react-hook/media-query';
 import { motion } from 'framer-motion';
+import Logo from "@/components/logo/Logo";
 
 
 interface Props {
@@ -34,7 +35,7 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
     const isMobile = useMediaQuery('(max-width: 1023px)');
 
     return (
-        <ul className={ulClass}>
+        <ul className={`${ulClass} pt-14`}>
             {
                 pathNames.map((path, i) => (
                     <motion.li
@@ -43,13 +44,16 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
                         animate={isSidebarOpen ? (isMobile ? { x: 0, opacity: 1 } : { opacity: 1 }) : { opacity: 1 }}
                         exit={isMobile ? { x: -100, opacity: 0 } : { opacity: 0 }}
                         transition={{ delay: i * (isMobile ? 0.13 : 0.2) }}
-                        className={liClass}
+                        className={`${liClass} gradient-text`}
                         onClick={setIsSidebarOpen}
                     >
-                        <Link href={path.href} className={`${isMobile && 'sideBarText'} block w-full text-3xl lg:text-lg `}>{path.name}</Link>
+                        <Link href={path.href} className={` block w-full text-3xl lg:text-lg `}>{path.name}</Link>
                     </motion.li>
                 ))
             }
+            <span className="absolute mx-auto left-[25%] bottom-10">
+                <Logo />
+            </span>
         </ul>
     )
 }
