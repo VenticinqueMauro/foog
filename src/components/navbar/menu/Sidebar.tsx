@@ -22,7 +22,7 @@ export default function Sidebar() {
                 className={`${isSidebarOpen
                         ? 'w-60 opacity-100 transition-all duration-75 ease-linear'
                         : 'w-0 opacity-0 pointer-events-none transition-all duration-300 ease-linear'
-                    } fixed top-0 left-0 z-20 min-h-screen bg-black py-3 shadow shadow-black`}
+                    } fixed top-0 left-0 z-20 min-h-screen bg-black py-3 shadow shadow-black sideBar`}
             >
                 <ContainerMenu ulClass={ulClassMobile} liClass={liClassMobile} />
             </section>

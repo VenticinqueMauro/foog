@@ -83,12 +83,13 @@ export default function Form() {
                 }
                 <button
                     type="submit"
-                    className="flex items-center inline-block gap-1 px-3 py-2 mt-5 font-semibold text-black rounded bg-zinc-300 me-auto"
+                    className="flex items-center inline-block gap-1 py-2 pl-2 mt-5 font-semibold text-black rounded bg-zinc-300 me-auto"
                 >
                     Send
-                    <MdOutlineArrowRight className='text-2xl' /></button>
+                    <MdOutlineArrowRight className='text-2xl' />
+                </button>
             </form>
-            <Toaster  />
+            <Toaster />
         </div>
     )
 }

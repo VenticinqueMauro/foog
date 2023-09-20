@@ -7,7 +7,7 @@ export default function Logo() {
         <Link href='/' className="z-30">
             <Image
                 priority
-                width={140}
+                width={120}
                 className="cursor-pointer logo"
                 src={logo}
                 alt="logo"
