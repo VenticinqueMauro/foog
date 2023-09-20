@@ -35,7 +35,7 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
     const isMobile = useMediaQuery('(max-width: 1023px)');
 
     return (
-        <ul className={`${ulClass} pt-14`}>
+        <ul className={`${ulClass} pt-14 lg:pt-0`}>
             {
                 pathNames.map((path, i) => (
                     <motion.li
@@ -51,7 +51,7 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
                     </motion.li>
                 ))
             }
-            <span className="absolute mx-auto left-[25%] bottom-10">
+            <span className="absolute mx-auto left-[25%] bottom-10 lg:hidden">
                 <Logo />
             </span>
         </ul>
