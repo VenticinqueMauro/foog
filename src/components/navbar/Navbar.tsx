@@ -6,7 +6,7 @@ import MenuHamburguesa from "./menu/MenuHamburguesa"
 import Sidebar from "./menu/Sidebar"
 import ContainerRedes from "./redes/ContainerRedes"
 
-const ulClassDesktop = "items-center hidden gap-1 lg:flex"
+const ulClassDesktop = "items-center hidden gap-1 lg:inline-flex"
 const liClassDesktop = "cursor-pointer menuItem hover:text-white hover:bg-zinc-900 px-3 py-1 rounded active:text-white focus:text-white capitalize"
 
 function Navbar() {

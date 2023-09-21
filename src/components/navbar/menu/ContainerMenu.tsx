@@ -1,10 +1,9 @@
 'use client'
 
 import { useStore } from "@/app/store/store";
-import Link from "next/link";
 import { useMediaQuery } from '@react-hook/media-query';
 import { motion } from 'framer-motion';
-import Logo from "@/components/logo/Logo";
+import Link from "next/link";
 
 
 interface Props {
@@ -51,9 +50,6 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
                     </motion.li>
                 ))
             }
-            <span className="absolute mx-auto left-[25%] bottom-10 lg:hidden">
-                <Logo />
-            </span>
         </ul>
     )
 }
