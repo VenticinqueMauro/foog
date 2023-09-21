@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 .bgAll {
-  background-color: #000000;
   background-image: url("/fondo.webp");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bgSideBar {
+  background-image: url("/fondoMobile.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .textura {
