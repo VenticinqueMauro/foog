@@ -4,12 +4,11 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMediaQuery } from '@react-hook/media-query';
 
-import image2 from '../../../public/2.jpg';
-import image3 from '../../../public/3.jpg';
-import image4 from '../../../public/4.jpg';
-import image5 from '../../../public/5.jpg';
-import image6 from '../../../public/6.jpg';
-import Image from 'next/image';
+import image2 from '../../../public/2.webp';
+import image3 from '../../../public/3.webp';
+import image4 from '../../../public/4.webp';
+import image5 from '../../../public/5.webp';
+import image6 from '../../../public/6.webp';
 
 const images = [image2, image3, image4, image5, image6];
 
