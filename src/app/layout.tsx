@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${noto.className} relative min-h-screen w-full text-zinc-400 bgAll`}>
+      <body className={`${noto.className} relative min-h-screen w-full text-zinc-400 bg-black bgAll`}>
         <Navbar />
         {children}
         <Footer />
