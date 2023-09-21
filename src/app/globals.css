@@ -8,14 +8,6 @@
   background-repeat: no-repeat;
 }
 
-@media (min-width: 768px) {
-  .bgAll {
-    background-image: url("/fondoMobile.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
 .textura {
   background-color: #161f20;
   background-image: linear-gradient(
