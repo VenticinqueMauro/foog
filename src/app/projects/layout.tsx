@@ -18,7 +18,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <section className="min-h-screen px-6 lg:px-10">
+        <section className="min-h-screen px-6 lg:px-10 bgProjects">
                 {children}
         </section>
     )

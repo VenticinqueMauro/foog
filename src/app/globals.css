@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
 }
 
+.bgProjects{
+  background-color: #000000;
+background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+}
+
 .textura {
   background-color: #161f20;
   background-image: linear-gradient(
