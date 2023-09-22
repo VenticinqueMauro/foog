@@ -54,7 +54,7 @@ export default function ContainerMenu({ ulClass, liClass }: Props) {
                     ))
                 }
                 <motion.div
-                    className="absolute left-0 right-0 flex flex-col gap-2 mx-auto bottom-10 lg:hidden"
+                    className="absolute left-0 right-0 flex flex-col gap-2 mx-auto bottom-24 lg:hidden"
                     initial={isMobile ? { x: -200, opacity: 0 } : { opacity: 0 }}
                     animate={isSidebarOpen ? (isMobile ? { x: 0, opacity: 1 } : { opacity: 1 }) : { opacity: 1 }}
                     exit={{ opacity: 0 }}
