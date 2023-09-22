@@ -34,7 +34,7 @@ export default function Sidebar() {
                 animate={{ x: isSidebarOpen ? 0 : -100, opacity: isSidebarOpen ? 1 : 0 }}
                 exit={{ x: -100, opacity: 0 }}
                 transition={{ duration: isSidebarOpen ? 0.1 : 0.3 }}
-                className={`fixed top-0 left-0 z-20 min-h-screen py-3 shadow-lg shadow-black bg-zinc-950`}
+                className={`fixed top-0 left-0 z-20 w-60 min-h-screen py-3 shadow-lg shadow-black bg-zinc-950`}
             >
                 <ContainerMenu ulClass={ulClassMobile} liClass={liClassMobile} />
             </motion.section>
