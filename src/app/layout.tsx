@@ -9,12 +9,12 @@ const poppins = Poppins({ subsets: ['latin'], style: "normal", weight: ["400"] }
 const noto = Noto_Sans({ subsets: ['latin'], style: "normal", weight: ["400", "500", "600", "700"] })
 
 export const metadata: Metadata = {
-  title: 'FOOG | Estudio De Visualización 3D',
-  description: 'Somos un estudio especializado en visualización arquitectónica 3D. Transformamos ideas en imágenes asombrosas y experiencias inmersivas. Explora nuestra galería de proyectos destacados y descubre cómo podemos dar vida a tus diseños.',
-  keywords: 'FOOG, Estudio de Visualización, 3D, Renders, Arquitectura, Inmersivo',
+  title: 'FOOG | 3D Visualization Studio',
+  description: 'We are a specialized 3D architectural visualization studio. We transform ideas into stunning images and immersive experiences. Explore our gallery of featured projects and discover how we can bring your designs to life.',
+  keywords: 'FOOG, Visualization Studio, 3D, Renders, Architecture, Immersive',
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1',
-  authors: [{ name: 'Venticinque Mauro', url: 'https://mvdev.vercel.app/' }],
+  authors: [{ name: 'Mauro Venticinque', url: 'https://mvdev.vercel.app/' }],
   publisher: 'FOOG',
 };
 

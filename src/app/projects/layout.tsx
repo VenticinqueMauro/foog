@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Galería de Visualizaciones 3D | FOOG',
-    description: 'Explora nuestra galería de proyectos arquitectónicos 3D. Descubre una amplia variedad de renders y representaciones 3D de interiores y exteriores. ¡Inspírate con nuestros proyectos destacados!',
-    keywords: 'proyectos, galería, visualizaciones 3D, renders, arquitectura, interiores, exteriores',
+    title: '3D Visualization Gallery | FOOG',
+    description: 'Explore our gallery of 3D architectural projects. Discover a wide variety of renders and 3D representations for interiors and exteriors. Get inspired by our featured projects!',
+    keywords: 'projects, gallery, 3D visualizations, renders, architecture, interiors, exteriors',
     robots: 'index, follow',
     viewport: 'width=device-width, initial-scale=1',
-    authors: [{ name: 'Venticinque Mauro', url: 'https://mvdev.vercel.app/' }],
+    authors: [{ name: 'Mauro Venticinque', url: 'https://mvdev.vercel.app/' }],
     publisher: 'FOOG',
 };
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <section className="min-h-screen px-6 lg:px-10 bgProjects">
-                {children}
+            {children}
         </section>
     )
 }
