@@ -9,7 +9,7 @@ interface Props {
 export default function RedItem({ icon, href }: Props) {
 
     return (
-        <Link href={href} className="focus:text-white hover:text-white" target="_blank">
+        <Link href={href} className="focus:text-white hover:text-white " target="_blank">
             {icon}
         </Link>
     )

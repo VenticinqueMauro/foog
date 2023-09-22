@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useMediaQuery } from '@react-hook/media-query';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 import image2 from '../../../public/2.webp';
 import image3 from '../../../public/3.webp';
@@ -44,11 +44,6 @@ const ImageSlider = () => {
                     }}
                 >
                     {images.map((image, index) => (
-                        // <div
-                        //     key={index}
-                        //     className="w-screen h-screen bg-center bg-cover"
-                        //     style={{ backgroundImage: `url(${image.src})` }}
-                        // ></div>
                         <motion.img
                             key={index}
                             src={image.src}
@@ -67,4 +62,15 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
+
+
+
+
+
+
+
+
+
+
+
 
