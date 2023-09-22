@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
 
     return (
         <a
-            href={`https://api.whatsapp.com/send?phone=+${number}&text=Hello!%20%F0%9F%98%8A%20I'm%20on%20https://foogstudio.com/%20%F0%9F%8C%90`}
+            href={`https://api.whatsapp.com/send?phone=+${number}&text=Hello!%20%F0%9F%98%8A%20I'm%20on%20https://foggstudio.com/%20%F0%9F%8C%90`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-1 px-3 py-2 mx-auto mb-2 font-medium bg-green-600 rounded-full shadow-md w-fit bottom-28 text-zinc-100 shadow-black">
