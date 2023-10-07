@@ -8,6 +8,15 @@
   background-repeat: no-repeat;
 }
 
+.portada {
+  background-image: linear-gradient(
+    to top,
+    #000000ee 0%,
+    #00000000 60%,
+    #000000cc 100%
+  );
+}
+
 .bgProjects {
   background-color: #000000;
   background-image: url("https://www.transparenttextures.com/patterns/snow.png");
@@ -203,6 +212,16 @@
   color: transparent;
   text-shadow: -1px -1px 0 hsla(0, 0%, 100%, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
+.gradient-text-portada {
+  background-image: linear-gradient(
+    to right bottom,
+    #fff 30%,
+    hsla(0, 0%, 100%)
+  );
+  background-clip: text;
+  color: transparent;
+  text-shadow: -1px -1px 0 hsla(0, 0%, 100%, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
 
 /* Definimos algunas variables personalizadas */
 :root {
@@ -236,4 +255,21 @@
   margin-right: auto;
   margin-left: auto;
   z-index: -1;
+}
+
+.vertical-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 2rem; /* Tamaño de fuente ajustable según tus necesidades */
+  text-shadow: 0px 2px 10px #000;
+}
+
+.vertical-text span {
+  margin: 0.2em 0;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  display: inline-block;
 }

@@ -29,7 +29,13 @@ const ImageSlider = () => {
     }, [isMobile]);
 
     return (
-        <div className="relative w-screen h-screen overflow-hidden">
+        <div className="relative w-screen h-screen overflow-hidden ">
+            <div className='absolute z-10  w-full portada h-screen'>
+                <div className='absolute bottom-16 left-[2%]  inline-block  text-start bg-black cristal px-5 py-3 rounded-xl'>
+                    <h1 className='font-bold text-6xl text-white' style={{ textShadow: '0px 2px 10px #000' }}>Designing Tomorrow, Today</h1>
+                    <h2 className='pt-3 text-xl font-semibold text-white' style={{ textShadow: '0px 2px 10px #000' }}>Pioneering 3D Architectural Visualization Excellence</h2>
+                </div>
+            </div>
             <AnimatePresence mode='wait'>
                 <motion.div
                     key={currentIndex}
