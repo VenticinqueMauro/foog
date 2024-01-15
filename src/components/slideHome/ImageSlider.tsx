@@ -17,6 +17,8 @@ const ImageSlider = () => {
     const isMobile = useMediaQuery('(max-width: 1023px)');
 
     useEffect(() => {
+
+
         const interval = setInterval(() => {
             // Avanzar al siguiente índice de imagen
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -31,7 +33,7 @@ const ImageSlider = () => {
     return (
         <div className="relative w-screen h-screen overflow-hidden ">
             <div className='absolute z-10 w-full h-screen portada'>
-                <div className='absolute bottom-16 md:left-[2%] inline-block text-start mx-2 bg-black cristal px-5 py-3 rounded-xl'>
+                <div className='absolute bottom-16 md:left-[2%] inline-block text-start mx-2 bg-gradient-to-b from-black/30 to-white/0  px-5 py-3 rounded-3xl'>
                     <h1 className='text-4xl font-bold text-white lg:text-6xl' style={{ textShadow: '0px 2px 10px #000' }}>Designing Tomorrow, Today</h1>
                     <h2 className='pt-3 text-base font-semibold text-white lg:text-xl' style={{ textShadow: '0px 2px 10px #000' }}>Pioneering 3D Architectural Visualization Excellence</h2>
                 </div>
