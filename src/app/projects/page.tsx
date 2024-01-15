@@ -1,5 +1,8 @@
 import PageTransitions from '@/components/framer/PageTransition'
-import TestGallery from './GetImages'
+import dynamic from 'next/dynamic';
+
+const TestGallery = dynamic(() => import("./GetImages"));
+
 
 export default function page() {
 

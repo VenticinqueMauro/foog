@@ -1,7 +1,10 @@
 
-import Gallery from "@/components/galeria/Gallery";
 import cloudinary from "cloudinary";
-import ProjectList from "./ProjectList";
+import dynamic from "next/dynamic";
+
+
+const ProjectList = dynamic(() => import("./ProjectList"), { ssr: false });
+const Gallery = dynamic(() => import("@/components/galeria/Gallery"), { ssr: false });
 
 
 export type Folder = {
