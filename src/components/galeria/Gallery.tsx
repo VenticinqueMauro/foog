@@ -1,7 +1,8 @@
 "use client";
 
 import useResize from "@/app/hooks/useResize";
-import { Suspense, useEffect, useState } from "react";
+import { useStore } from "@/app/store/store";
+import { useEffect, useState } from "react";
 import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import Download from "yet-another-react-lightbox/plugins/download";
@@ -11,8 +12,6 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import ImageGallery from "./ImageGallery";
 import NextJsImage from "./NextImage";
-import { useStore } from "@/app/store/store";
-import LoaderGalleryPhotos from "../loader/Loader.gallery.photos";
 
 export default function Gallery() {
     const { maxPhoto } = useResize();

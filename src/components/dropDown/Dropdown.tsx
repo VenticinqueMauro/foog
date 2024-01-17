@@ -10,12 +10,6 @@ export default function Dropdown({ liClass, handleClick }: { liClass: string, ha
     const [isDpOpen, setIsDpOpen] = useState(false);
     const { setIsSidebarOpen } = useStore();
 
-    const handleDropDown = () => {
-        setIsSidebarOpen();
-        setIsDpOpen((prev) => !prev);
-        console.log(isDpOpen);
-    };
-
     const closeDropdown = () => {
         setIsDpOpen(false);
     };

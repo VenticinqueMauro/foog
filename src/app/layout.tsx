@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import { Noto_Sans, Poppins } from 'next/font/google'
+import { Noto_Sans } from 'next/font/google'
 import Navbar from '../components/navbar/Navbar'
 import './globals.css'
 import Footer from '../components/footer/Footer'
 
-const poppins = Poppins({ subsets: ['latin'], style: "normal", weight: ["400"] })
 
 const noto = Noto_Sans({ subsets: ['latin'], style: "normal", weight: ["400", "500", "600", "700"] })
 
